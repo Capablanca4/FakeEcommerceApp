@@ -32,7 +32,7 @@ export default {
     return {
       images: [
         {
-          path: "/_nuxt/static/home-office.jpg",
+          path: "/home-office.png",
           text: "Hello",
           selected: true,
           switchLeftAnimation: false,
@@ -41,7 +41,7 @@ export default {
           switchImagesFromLeft: false,
         },
         {
-          path: "/_nuxt/static/home-office.jpg",
+          path: "/home-office.png",
           text: "Promo",
           selected: false,
           switchLeftAnimation: false,
@@ -50,7 +50,7 @@ export default {
           switchImagesFromLeft: false,
         },
         {
-          path: "/_nuxt/static/home-office.jpg",
+          path: "/home-office.png",
           text: "World",
           selected: false,
           switchLeftAnimation: false,
@@ -59,7 +59,7 @@ export default {
           switchImagesFromLeft: false,
         },
         {
-          path: "/_nuxt/static/home-office.jpg",
+          path: "/home-office.png",
           text: "Bonjour",
           selected: false,
           switchLeftAnimation: false,
