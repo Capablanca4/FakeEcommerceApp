@@ -1,2 +1,2 @@
 # FakeEcommerceApp
-Application web de démonstration uitilisant nuxt
+Application web de démonstration utilisant nuxt
