@@ -80,6 +80,5 @@ export default {
 
 .content__element{
     margin: 20px;
-    opacity: 1;
 }
 </style>

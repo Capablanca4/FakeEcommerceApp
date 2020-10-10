@@ -1,16 +1,19 @@
 <template>
-  <div>
+  <div class="default">
     <AppHeader />
     <Nuxt />
+    <AppFooter />
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/AppHeader";
+import AppFooter from "../components/AppFooter";
 
 export default {
   components: {
     AppHeader,
+    AppFooter
   },
 };
 </script>
@@ -25,6 +28,7 @@ export default {
   --limon-Color: #eae2b7;
   --grey-Color: #c4c4c4;
   --header-height: 70px;
+  --footer-height: 150px;
 }
 
 html {
@@ -36,6 +40,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -49,5 +54,10 @@ html {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.default{
+  min-height: 100vh;
+  position: relative;
 }
 </style>
