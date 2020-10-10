@@ -1,8 +1,10 @@
 <template>
-    <div>
+    <div class="card">
         <h3> {{title }} </h3>
-        <img v-bind:src="img" />
-        <nuxt-link v-bind:to="link">
+        <nuxt-link v-bind:to="link" class="card__img">
+            <img v-bind:src="img" />
+        </nuxt-link>
+        <nuxt-link v-bind:to="link" class="card__link">
             See also
         </nuxt-link>
     </div>
@@ -26,3 +28,32 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.card{
+    position: relative;
+    width: 400px;
+    height: 420px;
+    background-color: var(--limon-Color);
+}
+
+h3{
+    padding: 10px;
+}
+
+.card__img{
+    padding: 10px;
+    width: 100%;
+}
+
+.card__img > img{
+    width: 95%;
+}
+
+.card__link{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+</style>
