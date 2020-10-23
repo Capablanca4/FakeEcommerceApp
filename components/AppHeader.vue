@@ -32,13 +32,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
 header {
   display: flex;
   position: relative;
   justify-content: space-between;
-  height: var(--header-height);
-  background-color: var(--blue-Color);
+  height: $header-height;
+  background-color: $blue-Color;
 }
 
 .logo {

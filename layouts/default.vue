@@ -1,7 +1,7 @@
 <template>
   <div class="default">
     <AppHeader />
-    <Nuxt />
+    <Nuxt class="content" />
     <AppFooter />
   </div>
 </template>
@@ -18,18 +18,7 @@ export default {
 };
 </script>
 
-<style>
-:root {
-  --blue-Color: #003049;
-  --blue-Color-lighter: #00507a;
-  --orange-Color-darker: #d46e01;
-  --orange-Color: #f77f00;
-  --yellow-Color: #fcbf49;
-  --limon-Color: #eae2b7;
-  --grey-Color: #c4c4c4;
-  --header-height: 70px;
-  --footer-height: 150px;
-}
+<style lang="scss">
 
 html {
   font-family: Arial, sans-serif;
@@ -59,5 +48,14 @@ html {
 .default{
   min-height: 100vh;
   position: relative;
+}
+
+.content{
+  width: 100vw;
+  padding: 0 3vw 3vh 3vw;
+
+  & > *{
+    margin: 2vh 0 2vh 0;
+  }
 }
 </style>

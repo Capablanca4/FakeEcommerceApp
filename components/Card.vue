@@ -29,25 +29,28 @@ export default {
 }
 </script>
 
-<style scoped>
-.card{
-    position: relative;
-    width: 400px;
-    height: 420px;
-    background-color: var(--limon-Color);
-}
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
 
 h3{
     padding: 10px;
 }
 
-.card__img{
-    padding: 10px;
-    width: 100%;
-}
+.card{
+    position: relative;
+    width: 400px;
+    height: 420px;
+    background-color: $limon-Color;
 
-.card__img > img{
-    width: 95%;
+    &__img{
+        padding: 10px;
+        width: 100%;
+
+        & > img{
+            width: 95%;
+        }
+    }
 }
 
 .card__link{

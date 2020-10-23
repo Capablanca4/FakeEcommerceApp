@@ -25,9 +25,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
 .UserAuthForm {
-  background-color: var(--limon-Color);
+  background-color: $limon-Color-darker;
   width: 60vw;
   height: 70vh;
   margin: 5vh 20vw 5vh 20vw;

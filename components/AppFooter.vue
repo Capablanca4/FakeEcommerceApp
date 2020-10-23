@@ -1,5 +1,5 @@
 <template>
-   <footer>
+   <footer class="footer">
     <div class="footer__column">
         <h4>Get to know me</h4>
         <nuxt-link to="/KnowMe"> 
@@ -33,34 +33,37 @@ export default {
 }
 </script>
 
-<style scoped>
-footer{
-    height: var(--footer-height);
-    background-color: var(--blue-Color);
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
+.footer{
+    height: $footer-height;
+    background-color: $blue-Color;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    bottom: 0;
-}
+    bottom: -$footer-height;
 
-.footer__column{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin: 2em;
-}
+    &__column{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin: 2em;
 
-.footer__column > *{
-    margin-bottom: 4px;
+        & > *{
+            margin-bottom: 4px;
+        }
+    }
 }
 
 a{
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-}
 
-a:hover{
-    text-decoration: underline;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 </style>

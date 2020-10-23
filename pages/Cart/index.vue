@@ -1,9 +1,17 @@
 <template>
   <section class="container">
-    <h1>Cart</h1>
+    <CartResume />
+    <hr>
+    
   </section>
 </template>
 
 <script>
-export default {};
+import CartResume from "../../components/Cart/CartResume";
+
+export default {
+  components: {
+    CartResume
+  }
+};
 </script>

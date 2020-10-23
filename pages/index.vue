@@ -16,14 +16,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.container {
-  width: 100vw;
-  padding: 0 3vw 3vh 3vw;
-}
-
-.container > *{
-  margin-top: 3vh;
-}
-</style>

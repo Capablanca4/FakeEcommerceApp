@@ -24,29 +24,33 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
 .UserAuthForm {
-  background-color: var(--limon-Color);
+  background-color: $limon-Color-darker;
   width: 60vw;
   height: 70vh;
   margin: 5vh 20vw 5vh 20vw;
 }
+
 .register {
   display: inline-block;
   margin-left: 30vw;
   width: 40vw;
-}
 
-.register__button {
-  font-weight: bold;
-  cursor: pointer;
-  border-style: solid;
-  background-color: var(--yellow-Color);
-  height: 25px;
-  width: 100%;
-  font-size: 0.9em;
-  border-radius: 4px;
-  border-color: rgba(0, 0, 0, 0.6);
-  border-width: 1.5px;
+  &__button {
+    font-weight: bold;
+    cursor: pointer;
+    border-style: solid;
+    background-color: $yellow-Color;
+    height: 40px;
+    width: 100%;
+    font-size: 25px;
+    border-radius: 4px;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-width: 1.5px;
+  }
 }
 </style>

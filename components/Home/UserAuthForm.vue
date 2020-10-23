@@ -1,6 +1,6 @@
 <template>
-  <form method="post">
-    <h1>{{ header }}</h1>
+  <form method="post" class="form">
+    <h1 class="form__header">{{ header }}</h1>
     <label for="name" v-if="hasName">Name</label>
     <input type="text" id="name" v-if="hasName" v-model="logInInfo.name" required />
     <label for="email">Email</label>
@@ -14,7 +14,7 @@
     <label for="password">Password</label>
     <input type="password" id="password" v-model="logInInfo.password" required minlength="8" />
     <input type="submit" id="Continue" value="Continue" @click="submitForm(logInInfo)" />
-    <p>By continuing, you agree to our Condition of Use and Privacy Notice</p>
+    <p class="form__small">By continuing, you agree to our Condition of Use and Privacy Notice</p>
   </form>
 </template>
 
@@ -46,42 +46,59 @@ export default {
 };
 </script>
 
-<style scoped>
-form {
-  display: grid;
-  align-items: flex-start;
-  justify-items: flex-start;
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: space-around;
   padding: 1% 10% 3% 10%;
+  font-size: 30px;
   width: 100%;
   height: 100%;
+
+  &__header{
+    align-self: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+
+  & label,
+  p {
+    font-weight: bold;
+  }
+
+  & input {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-width: 1.5px;
+    border-radius: 4px;
+    font-size: 20px;
+    height: 40px;
+    width: 100%;
+  
+    &:invalid {
+      box-shadow: 0 0 20px 5px red;
+    }
+  }
+
+  &__small{
+    font-size: initial;
+  }
 }
 
-label,
-p {
-  font-weight: bold;
-}
-
-input {
-  border-radius: 4px;
-  border-color: rgba(0, 0, 0, 0.6);
-  border-style: solid;
-  border-width: 1.5px;
-  height: 25px;
-  width: 100%;
-}
-
-input:invalid {
-  box-shadow: 0 0 20px 5px red;
-}
 
 #Continue {
   font-weight: bold;
   cursor: pointer;
   font-size: 0.9em;
-  background-color: var(--orange-Color);
-}
+  background-color: $orange-Color;
 
-#Continue:hover {
-  background-color: var(--orange-Color-darker);
+  &:hover {
+    background-color: $orange-Color-darker;
+  }
 }
 </style>

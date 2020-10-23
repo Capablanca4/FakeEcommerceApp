@@ -45,7 +45,7 @@ export default {
    */
   buildModules: [],
 
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth",'@nuxtjs/style-resources'],
   /*
    ** Axios module configuration
    ** See https://axios.nuxt.js.org/options
@@ -65,6 +65,11 @@ export default {
         tokenType: ""
       }
     }
+  },
+  styleResources: {
+    scss: [
+        '~/assets/scss/_variables.scss',
+    ]
   },
   /*
    ** Build configuration

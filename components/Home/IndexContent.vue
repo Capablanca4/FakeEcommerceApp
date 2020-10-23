@@ -69,16 +69,16 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content{
     display: flex;
     flex-wrap: wrap;
     padding: 2vh 2vh 2vh 2vh;
     width: 100%;
     background-color: #f6f2df;
-}
 
-.content__element{
-    margin: 20px;
+    &__element{
+        margin: 20px;
+    }
 }
 </style>

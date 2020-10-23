@@ -44,28 +44,31 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
 .bars__icon {
   font-size: 2.2em;
   padding: 0.3em;
   color: white;
 }
 
-.sidebar.hidden {
-  left: -10em;
-}
-
 .sidebar {
   position: fixed;
   z-index: 99999;
   left: 0;
-  top: var(--header-height);
+  top: $header-height;
   width: 10em;
-  height: calc(100vh - var(--header-height));
-  background-color: var(--blue-Color-lighter);
+  height: calc(100vh - $header-height);
+  background-color: $blue-Color-lighter;
   transition-property: left;
   transition-duration: 1s;
   transition-timing-function: ease;
+
+  &.hidden {
+    left: -10em;
+  }
 }
 
 li a {
@@ -79,13 +82,13 @@ li a {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid black;
   transition-duration: 0.4s;
-}
 
-li a:hover {
-  padding-left: 1.6em;
-}
+  &:hover {
+    padding-left: 1.6em;
+  }
 
-a svg {
-  margin-left: 1em;
+  & svg{
+    margin-left: 1em;
+  }
 }
 </style>
