@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <Carroussel />
-    <IndexContent />
+    <SuggestionsContent />
   </div>
 </template>
 
 <script>
 import Carroussel from "../components/Home/Carroussel";
-import IndexContent from "../components/Home/IndexContent.vue";
+import SuggestionsContent from "../components/Shared/SuggestionsContent.vue";
 
 export default {
   components: {
     Carroussel,
-    IndexContent
+    SuggestionsContent
   },
 };
 </script>

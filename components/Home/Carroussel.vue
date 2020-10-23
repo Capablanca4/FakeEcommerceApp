@@ -14,7 +14,7 @@
           switchImagesFromLeft: img.switchImagesFromLeft,}"
         class="carroussel__img"
       >
-        <img v-bind:src="img.path" />
+        <img v-bind:src="img.path" alt="The images was not found" />
         <div class="img__text">{{ img.text }}</div>
       </div>
     </div>

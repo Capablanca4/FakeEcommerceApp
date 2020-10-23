@@ -1,6 +1,9 @@
 <template>
-    <div class="content">
-        <Card v-for="card in listCard" v-bind:key="card.id" :img="card.img" :link="card.link" :title="card.title" class="content__element" /> 
+    <div class="suggestion">
+        <h1> Suggestion </h1>
+        <div class="content">
+            <Card v-for="card in listCard" v-bind:key="card.id" :img="card.img" :link="card.link" :title="card.title" class="content__element" /> 
+        </div>
     </div>
 </template>
 
@@ -12,7 +15,6 @@ export default {
         Card
     },
     data(){
-
         return {
             listCard:[
                 {

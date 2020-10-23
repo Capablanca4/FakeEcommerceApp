@@ -60,7 +60,7 @@ export default {
   left: 0;
   top: $header-height;
   width: 10em;
-  height: calc(100vh - $header-height);
+  height: calc(100vh - #{$header-height});
   background-color: $blue-Color-lighter;
   transition-property: left;
   transition-duration: 1s;

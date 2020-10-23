@@ -2,7 +2,7 @@
     <div class="card">
         <h3> {{title }} </h3>
         <nuxt-link v-bind:to="link" class="card__img">
-            <img v-bind:src="img" />
+            <img v-bind:src="img" alt="The images was not found" />
         </nuxt-link>
         <nuxt-link v-bind:to="link" class="card__link">
             See also
@@ -51,12 +51,11 @@ h3{
             width: 95%;
         }
     }
-}
 
-.card__link{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    &__link{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
 }
-
 </style>
