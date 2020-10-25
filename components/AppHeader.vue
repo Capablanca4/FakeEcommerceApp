@@ -40,8 +40,8 @@ header {
   display: flex;
   position: relative;
   justify-content: space-between;
-  height: $header-height;
-  background-color: $blue-Color;
+  height: height(header);
+  background-color: color("blue");
 }
 
 .logo {

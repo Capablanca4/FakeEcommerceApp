@@ -29,7 +29,7 @@ export default {
 @import './assets/sass/variables';
 
 .UserAuthForm {
-  background-color: $limon-Color-darker;
+  background-color: color(darker-limon);
   width: 60vw;
   height: 70vh;
   margin: 5vh 20vw 5vh 20vw;
@@ -44,7 +44,7 @@ export default {
     font-weight: bold;
     cursor: pointer;
     border-style: solid;
-    background-color: $yellow-Color;
+    background-color: color("yellow");
     height: 40px;
     width: 100%;
     font-size: 25px;

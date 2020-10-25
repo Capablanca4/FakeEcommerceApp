@@ -38,13 +38,13 @@ export default {
 @import './assets/sass/variables';
 
 .footer{
-    height: $footer-height;
-    background-color: $blue-Color;
+    height: height(footer);
     width: 100%;
+    background-color: color("blue");
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    bottom: -$footer-height;
+    bottom: -height(footer);
 
     &__column{
         display: flex;

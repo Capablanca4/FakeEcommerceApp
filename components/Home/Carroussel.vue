@@ -109,7 +109,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /**carroussel : for the container
     carroussel__chevron-left/rigth : for switching photo right and left
     carroussel__img : for the images inside the carrousel
@@ -118,39 +118,34 @@ export default {
 .carroussel {
   display: flex;
   position: relative;
-  width: 100%;
   height: 300px;
-}
 
-/*carroussel__chevron-left/rigth*/
-.carroussel__chevron-left,
-.carroussel__chevron-right {
-  position: absolute;
-  cursor: pointer;
-  width: 7vw;
-  height: 100%;
-  background-color: rgba(122, 122, 122, 0.5);
-  color: rgba(0, 0, 0, 0.6);
-  transition-property: all;
-  transition-delay: 0.4s;
-  transition-timing-function: ease;
-}
+  /*carroussel__chevron-left/rigth*/
+  &__chevron-left,
+  &__chevron-right {
+    position: absolute;
+    cursor: pointer;
+    width: 7vw;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.5);
+    color: rgba(0, 0, 0, 0.6);
+    transition-property: all;
+    transition-delay: 0.4s;
+    transition-timing-function: ease;
 
-.carroussel__chevron-left:hover,
-.carroussel__chevron-right:hover {
-  color: rgba(0, 0, 0, 0.8);
-  transition-property: all;
-  transition-delay: 0.4s;
-  transition-timing-function: ease;
-}
+    &:hover{
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
 
-.carroussel__chevron-left {
-  left: 0;
-  z-index: 1;
-}
+  &__chevron-left {
+    left: 0;
+    z-index: 1;
+  }
 
-.carroussel__chevron-right {
-  right: 0;
+  &__chevron-right {
+    right: 0;
+  }
 }
 
 /*carroussel__img*/
@@ -162,20 +157,20 @@ export default {
 .carroussel__img {
   position: relative;
   opacity: 0;
-}
 
-.carroussel__img.selected {
-  opacity: 1;
-}
+  &.selected{
+    opacity: 1;
+  }
 
-.carroussel__img img {
-  position: absolute;
-  object-fit: cover;
-  object-position: 50% 50%;
-  width: 100%;
-  height: 300px;
-  top: 0;
-  left: 0;
+  & img{
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+  }
 }
 
 .img__text {

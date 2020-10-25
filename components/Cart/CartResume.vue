@@ -1,6 +1,6 @@
 <template>
     <div class="resume">
-        <div v-if="products.length == 0" class="resume__empty">
+        <div v-if="products.length == 0" class="empty">
             <img src="/empty-cart.png" alt="the image was not found" class="empty__img"/>
             <h1 class="empty__title">Your cart is empty</h1>
             <div class="empty__suggestions">
@@ -28,27 +28,23 @@ export default {
 
 @import './assets/sass/variables';
 
-.resume__empty{
+.empty{
     display: grid;
     grid-template-areas: 
     "image title . . . . ."
     "image suggestions . . . . .";
-    background-color: $limon-Color;
+    background-color: color(limon);
     border-radius: 5px;
     margin: 0 auto;
     height: 400px;
     width: 98%;
-}
-
-.empty{
 
     &__suggestions{
         grid-area: suggestions;
-        background-color: $limon-Color-darker;
+        background-color: color(darker-limon);
         border-radius: 15px;
         padding: 1em;
-        width: 50%;
-        height: 100px;
+        height: max-content;
         font-weight: bold;
     }
 
@@ -57,13 +53,23 @@ export default {
         align-self: center;
         margin: 0 auto;
         width: 250px;
-        height: 375px;
+        height: auto;
     }
 
     &__title{
         grid-area: title;
         align-self: center;
         font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .empty{
+        height: 40%;
+
+        &__img{
+            width: 70%;
+        }
     }
 }
 </style>

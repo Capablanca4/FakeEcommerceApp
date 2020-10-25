@@ -41,7 +41,7 @@ h3{
     position: relative;
     width: 400px;
     height: 420px;
-    background-color: $limon-Color;
+    background-color: color(limon);
 
     &__img{
         padding: 10px;

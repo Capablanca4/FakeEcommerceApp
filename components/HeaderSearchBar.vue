@@ -85,6 +85,8 @@ export default {
 
   &__input {
     width: 80%;
+    border:0;
+    font-size: 25px;
   }
 
   &__validate {
@@ -92,10 +94,15 @@ export default {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     width: 9%;
-    background-color: $orange-Color;
+    background-color: color("orange");
+
+    &:hover{
+      background-color: color(darker-orange);
+    }
   }
 
   &__magnifier {
+    color: black;
     height: 100%;
     width: 100%;
     padding: 15%;

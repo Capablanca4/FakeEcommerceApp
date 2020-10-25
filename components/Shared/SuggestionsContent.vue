@@ -72,12 +72,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import './assets/sass/variables';
+
 .content{
     display: flex;
     flex-wrap: wrap;
-    padding: 2vh 2vh 2vh 2vh;
+    padding: 2vh;
     width: 100%;
-    background-color: #f6f2df;
+    background-color: color(lighter-limon);
 
     &__element{
         margin: 20px;

@@ -17,24 +17,24 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .user {
   color: white;
   height: 75%;
   margin-top: 8.75px;
-}
 
-.user__icon {
-  display: flex;
-  align-items: center;
-  height: 60%;
-  width: 100%;
-}
+  &__icon {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+  }
 
-.user__text {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 </style>

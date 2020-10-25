@@ -1,3 +1,28 @@
+$color: (
+    "blue":#003049,
+    "lighter-blue":#00507a,
+    "orange": #f77f00,
+    "darker-orange": #d46e01,
+    "yellow": #fcbf49,
+    "lighter-limon": #f6f2df,
+    "limon": #faf0b8,
+    "darker-limon": #f7e99a,
+    "grey": #c4c4c4
+);
+
+$height: (
+    "header": 70px,
+    "footer": 150px
+);
+
+@function color($color-name){
+    @return map-get($color , $color-name );
+}
+
+@function height($height-name){
+    @return map-get($height , $height-name );
+}
+
 $blue-Color: #003049;
 $blue-Color-lighter: #00507a;
 $orange-Color-darker: #d46e01;

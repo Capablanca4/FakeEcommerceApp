@@ -58,10 +58,10 @@ export default {
   position: fixed;
   z-index: 99999;
   left: 0;
-  top: $header-height;
+  top: height(header);
   width: 10em;
-  height: calc(100vh - #{$header-height});
-  background-color: $blue-Color-lighter;
+  height: calc(100vh - #{height(header)});
+  background-color: color(lighter-blue);
   transition-property: left;
   transition-duration: 1s;
   transition-timing-function: ease;
@@ -85,10 +85,6 @@ li a {
 
   &:hover {
     padding-left: 1.6em;
-  }
-
-  & svg{
-    margin-left: 1em;
   }
 }
 </style>

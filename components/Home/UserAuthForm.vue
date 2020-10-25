@@ -57,8 +57,6 @@ export default {
   justify-content: space-around;
   padding: 1% 10% 3% 10%;
   font-size: 30px;
-  width: 100%;
-  height: 100%;
 
   &__header{
     align-self: center;
@@ -95,10 +93,10 @@ export default {
   font-weight: bold;
   cursor: pointer;
   font-size: 0.9em;
-  background-color: $orange-Color;
+  background-color: color("orange");
 
   &:hover {
-    background-color: $orange-Color-darker;
+    background-color: color(darker-orange);
   }
 }
 </style>
